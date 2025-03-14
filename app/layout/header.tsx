@@ -10,8 +10,8 @@ const links = [
     { name: "Inicio", href: "/" },
     {
         name: "Secciones", items: [
-            { name: "Introducción", href: "" },
-            { name: "JSX, Props y Estado", href: "" },
+            { name: "Introducción", href: "/sections" },
+            { name: "JSX, Props y Estado", href: "/sections/jsx-props-states" },
             { name: "Efectos y Ciclo de Vida", href: "" },
             { name: "Rutas y Navegación", href: "" },
             { name: "Estado Global y Context API", href: "" },
@@ -23,7 +23,7 @@ const links = [
 ]
 
 export const Header = () => {
-    const pathname = usePathname() || "/home";
+    const pathname = usePathname() || "/";
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
     
@@ -40,7 +40,7 @@ export const Header = () => {
 
     return (
         <header className='px-10 py-5 border-b flex justify-between items-center flex-wrap'>
-            <h1 className='flex'>| <span className='flex px-2'>Learn <IoLogoReact className='text-2xl' /></span> |</h1>
+            <small className='flex'>| <span className='flex px-2'>Learn <IoLogoReact className='text-xl' /></span> |</small>
             <nav className='flex gap-10'>
                 {links.map(({ name, href, items }) => (
                     items ? (

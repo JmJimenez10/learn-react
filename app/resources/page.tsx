@@ -14,7 +14,7 @@ export default function Resources() {
                     <h1 className={`${poppins.className} text-3xl font-bold text-center`}>Recursos para Desarrollo Web</h1>
 
                     <div className="w-full my-10">
-                        <h2 className="text-2xl text-neutral-200 mb-4">Índice</h2>
+                        <h2 className="text-neutral-200 mb-4">Índice</h2>
                         <ul className="space-y-2 list-decimal text-neutral-400">
                             {links.map((category, index) => (
                                 <li key={index}>
